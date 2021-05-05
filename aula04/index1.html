@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!--onclick="clicar()" onmouseenter= "entrar()" onmouseout="sair()"--> 
+        Interaja...
+    </div>
+
+    <script>
+
+        var area = window.document.getElementById('area') //variavel definida para as 3funçoẽs, usando o metodo de selcionar o elemento 
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)   //tirando os metodos do html e colocando no JS criando uma ligaçao entre os dois
+        area.addEventListener('mouseout', sair)
+
+        function clicar(){
+            area.innerText = 'Clicou'
+            area.style.background = 'red' //com um click fica vermenho 
+            //fazendo uma funçao de clicar com o mause 
+        }
+        function entrar(){
+            area.innerText = 'Entrou'
+            //fazendo uma funçao de entrar com o mause  
+        }
+        function sair(){
+            area.innerText = 'Saiu'
+            area.style.background = 'green'//quando sai volta pr verde 
+            //fazendo uma funçao de sair com o mause  
+        }
+    </script>
+</body>
+</html>
