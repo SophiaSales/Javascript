@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com Dom</title>
+    <style>
+        body{
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+
+    <div id="msg">Clique em mim</div> <!--posso chamar o div de id de name ou de class e usar os elementos de JS pra buscalos e usar em outro lugar-->
+    <div name="msgs">Qualquer coisa</div> 
+    <div class="mag">Outra qualquer coisa</div> 
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1] //uns dos metodos de mostrar a informação no doc é pelo get..name indicando o nome da tag 
+        var d = window.document.getElementById('msg') //usando o metodo get..id pra mostrar a informação
+        var n = window.document.getElementsByName('msgs')[0]
+
+        var s = window.document.querySelector('div.mag') //para chamar um id usa '#' e para classes usa '.'
+
+        window.document.write(window.navigator.appName ) //possivel mostrar informaçoes no documento html
+        window.document.write(p1.innerText) // chamando p1 e mostrado novamente na pagina, podendo usar tambem innerhtml
+        d.style.background = 'green' // chamando d pra alteraçoes de cor ou mudando o texto
+        n.innerText = 'Ola!'
+        s.style.color = 'blue'
+
+
+    </script>
+</body>
+</html>
