@@ -1,8 +1,8 @@
 var diaAtual = new Date()
-var diaSem = diaAtual.getDay()
+var diaSem = diaAtual.getDay() // pegando dia atual do sistema
 console.log(`Hoje é`);
 
-switch (diaSem) {
+switch (diaSem) { 
     case 0:
         console.log('Domingo');
         break;
@@ -28,3 +28,4 @@ switch (diaSem) {
         console.log('[ERRO] Dia invalido');
         break;
 }
+//usando multiplas condiçoes com switch
