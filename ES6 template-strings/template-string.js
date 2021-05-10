@@ -13,7 +13,7 @@ console.log(str);
 //Exemplo 3 ******************
 function tag(strings, ...value) {
     console.log(strings, value);
-    console.log(strings.raw[0]);
+    console.log(strings.raw[0]); //mostrando raw 
     return 'opa'
 }
 const str = tag`Ola
