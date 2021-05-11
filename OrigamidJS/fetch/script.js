@@ -1,6 +1,6 @@
 fetch("https://ranekapi.origamid.dev/wp-json/api/produto")//lista de produtos, um codigo quw esta vindo 
 
-    .then(response => response.json()) 
+    .then(response => response.json()) //then retora response antes mesmo da promeça ser concluida
     .then(jsonBody =>{
         document.querySelector('#app').innerHTML = jsonBody[0].nome //seleciona o app do html retorna um elemento nome da lista em json
         console.log(jsonBody); //retorna uma lista em json
